@@ -25,8 +25,6 @@ export const fisioterapisLogin = async (
   const response = await axios.post('http://localhost:3000/api/fisioterapis/email', postData);
   const userdata = response.data
   const fisioterapisData = userdata[0]
-  console.log(userdata)
-  console.log(fisioterapisData)
 
   if (fisioterapisData === undefined) {
     return { error: "wrong credentials" }
@@ -36,7 +34,8 @@ export const fisioterapisLogin = async (
     return { error: "wrong credentials" };
   }
 
-  session.email = formEmail;
+  session.name = fisioterapisData.name;
+  session.id = fisioterapisData._id;
   session.isFisioterapis = true;
   session.isLoggedIn = true;
 

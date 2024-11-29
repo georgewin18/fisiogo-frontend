@@ -34,7 +34,8 @@ export const userLogin = async (
     return { error: "wrong credentials" };
   }
 
-  session.email = formEmail;
+  session.name = userData.name;
+  session.id = userData._id;
   session.isFisioterapis = false;
   session.isLoggedIn = true;
 
