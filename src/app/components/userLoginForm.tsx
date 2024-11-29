@@ -54,9 +54,6 @@ export default function UserLoginForm() {
       <div className="flex sm:flex-row sm:items-center sm:justify-center mt-4">
         <SubmitButton />
       </div>
-      <div className="mt-4 text-sm text-center">
-        <a href="#" className="text-blue-600 hover:underline">Register Account</a>
-      </div>
       { state?.error && <p>{state.error}</p> }
     </form>
   )

@@ -12,7 +12,7 @@ function SubmitButton() {
   
   return (
     <Button type="submit" disabled={pending} className="px-6 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-900">
-      {pending ? 'Logging in...' : 'User Login'}
+      {pending ? 'Logging in...' : 'Fisioterapis Login'}
     </Button>
   )
 }
