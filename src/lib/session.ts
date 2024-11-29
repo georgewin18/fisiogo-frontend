@@ -1,7 +1,8 @@
 import { SessionOptions } from "iron-session";
 
 export interface SessionData {
-  email?: string;
+  name?: string;
+  id?: string;
   isFisioterapis?: boolean;
   isLoggedIn: boolean;
 }
